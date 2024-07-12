@@ -1,0 +1,6 @@
+@MyFurturePurchase_HostAddress = http://localhost:5213
+
+GET {{MyFurturePurchase_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
