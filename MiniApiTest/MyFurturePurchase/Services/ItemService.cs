@@ -36,8 +36,8 @@ namespace MyFurturePurchase.Services
 
         }
 
-        public async Task<List<Item>> GetItemsAsync(Guid id)
-        => await _myDBContext.Items.Where(item => item.Id == id).ToListAsync();
+        public async Task<Item?> GetItemAsync(Guid id)
+        => await _myDBContext.Items.FirstOrDefaultAsync(item => item.Id == id);
 
 
         public async Task<List<Item>> GetItemsAsync()
